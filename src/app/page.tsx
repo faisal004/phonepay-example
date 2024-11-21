@@ -1,5 +1,6 @@
 'use client'
 import { initiatePayment } from '@/actions/initiatePayment'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 
 export default function Home() {
@@ -15,13 +16,16 @@ export default function Home() {
     }
   }
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex flex-col gap-4 items-center justify-center h-screen">
       <button
         onClick={() => handlePay(1)}
         className="inline-flex h-12 animate-background-shine items-center justify-center rounded-md border border-gray-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-gray-400 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
       >
         Pay ₹1
       </button>
+      <Link target='_blank' href={'https://faisalhusa.in/blog/integrate-phonepay-to-your-nextjsapp#you-can-use-this-card-details-and-otp-to-complete-the-payment'}>
+      Get Test Credentionals
+      </Link>
     </div>
   )
 }
